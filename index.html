@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DealGadget India — Best Deals, Discounts &amp; Offers Across India, Updated Live</title>
+<meta name="description" content="DealGadget India tracks and aggregates the best live deals, discounts and offers from Amazon, Flipkart, Myntra, Nykaa and 40+ Indian stores — mobiles, electronics, fashion, home and more, updated every hour.">
+<meta name="keywords" content="deals india, discount offers india, flipkart deals, amazon deals india, best offers today, online shopping deals, deal aggregator india, sale today india">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.dealgadget.in/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DealGadget India">
+<meta property="og:title" content="DealGadget India — Best Deals, Discounts & Offers Across India">
+<meta property="og:description" content="Live-tracked deals from 40+ Indian stores. Mobiles, electronics, fashion, home, beauty and more — sorted, verified, updated hourly.">
+<meta property="og:url" content="https://www.dealgadget.in/">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://www.dealgadget.in/og-cover.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DealGadget India — Best Deals, Discounts & Offers Across India">
+<meta name="twitter:description" content="Live-tracked deals from 40+ Indian stores, sorted and verified, updated hourly.">
+
+<meta name="theme-color" content="#10142B">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured data: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DealGadget India",
+  "url": "https://www.dealgadget.in/",
+  "logo": "https://www.dealgadget.in/logo.png",
+  "description": "DealGadget India aggregates live deals, discounts and offers from major Indian e-commerce stores.",
+  "areaServed": "IN"
+}
+</script>
+<!-- Structured data: ItemList of deals (sample, mirrors visible deal grid) -->
+<script type="application/ld+json" id="deal-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": []
+}
+</script>
+
+<style>
+  :root{
+    --ink:#10142B;
+    --ink-2:#1B2145;
+    --ink-3:#262C55;
+    --saffron:#FF9F1C;
+    --saffron-dim:#7a5313;
+    --teal:#00B8A9;
+    --rose:#FF5470;
+    --paper:#EEF1F1;
+    --paper-card:#FFFFFF;
+    --text-dark:#10142B;
+    --text-mute:#565C74;
+    --text-light:#F1F3F4;
+    --line: rgba(16,20,43,0.10);
+    --line-light: rgba(241,243,244,0.14);
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(16,20,43,0.08);
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--body);
+    background:var(--paper);
+    color:var(--text-dark);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+  :focus-visible{outline:3px solid var(--teal);outline-offset:2px;}
+
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(16,20,43,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-light);
+  }
+  .nav{display:flex;align-items:center;gap:28px;height:72px;color:var(--text-light);}
+  .logo{
+    display:flex;align-items:center;gap:10px;
+    font-family:var(--display);font-weight:700;font-size:1.25rem;
+    letter-spacing:-0.01em;
+    white-space:nowrap;
+  }
+  .logo .mark{
+    width:34px;height:34px;border-radius:9px;
+    background:linear-gradient(135deg,var(--saffron),var(--rose));
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-size:0.85rem;font-weight:600;color:var(--ink);
+    flex-shrink:0;
+  }
+  .nav-links{display:flex;gap:22px;font-size:0.92rem;font-weight:500;flex:1;}
+  .nav-links a{opacity:0.82;transition:opacity .15s;}
+  .nav-links a:hover{opacity:1;color:var(--saffron);}
+  .nav-search{
+    display:flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid var(--line-light);
+    border-radius:100px;padding:8px 16px;
+    flex:1;max-width:320px;
+  }
+  .nav-search input{
+    background:none;border:none;color:var(--text-light);font-family:var(--body);
+    font-size:0.88rem;width:100%;
+  }
+  .nav-search input::placeholder{color:rgba(241,243,244,0.5);}
+  .nav-cta{
+    background:var(--saffron);color:var(--ink);
+    padding:10px 18px;border-radius:100px;
+    font-size:0.86rem;font-weight:700;white-space:nowrap;
+    transition:transform .15s;
+  }
+  .nav-cta:hover{transform:translateY(-1px);}
+  .burger{display:none;color:var(--text-light);font-size:1.4rem;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(circle at 85% 0%, rgba(255,159,28,0.18), transparent 45%),
+      radial-gradient(circle at 10% 100%, rgba(0,184,169,0.16), transparent 40%),
+      var(--ink);
+    color:var(--text-light);
+    padding:76px 0 0;
+    position:relative;
+  }
+  .hero-inner{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;padding-bottom:64px;}
+  .eyebrow{
+    font-family:var(--mono);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:20px;
+  }
+  .eyebrow::before{
+    content:"";width:8px;height:8px;border-radius:50%;background:var(--teal);
+    box-shadow:0 0 0 4px rgba(0,184,169,0.25);
+    animation:pulse 1.8s infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+  h1{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(2.4rem,4.6vw,3.8rem);line-height:1.04;letter-spacing:-0.02em;
+    margin-bottom:22px;
+  }
+  h1 em{font-style:normal;color:var(--saffron);}
+  .hero p.lede{
+    font-size:1.08rem;line-height:1.6;color:rgba(241,243,244,0.78);
+    max-width:520px;margin-bottom:32px;
+  }
+  .hero-search{
+    display:flex;gap:10px;background:rgba(255,255,255,0.06);
+    border:1px solid var(--line-light);border-radius:14px;padding:8px;
+    max-width:520px;margin-bottom:20px;
+  }
+  .hero-search input{
+    flex:1;background:none;border:none;color:var(--text-light);
+    font-family:var(--body);font-size:0.98rem;padding:10px 14px;
+  }
+  .hero-search input::placeholder{color:rgba(241,243,244,0.45);}
+  .hero-search button{
+    background:var(--teal);color:var(--ink);font-weight:700;
+    padding:12px 22px;border-radius:9px;font-size:0.92rem;white-space:nowrap;
+    transition:filter .15s;
+  }
+  .hero-search button:hover{filter:brightness(1.08);}
+  .hero-stats{display:flex;gap:28px;flex-wrap:wrap;}
+  .hero-stats div{font-family:var(--mono);}
+  .hero-stats strong{display:block;font-size:1.5rem;color:var(--saffron);font-weight:600;}
+  .hero-stats span{font-size:0.76rem;color:rgba(241,243,244,0.6);text-transform:uppercase;letter-spacing:0.06em;}
+
+  /* signature: price-tag stack */
+  .tag-stack{position:relative;height:420px;}
+  .price-tag{
+    position:absolute;width:270px;background:var(--paper-card);color:var(--text-dark);
+    border-radius:4px 16px 16px 4px;
+    box-shadow:var(--shadow);
+    padding:18px 18px 18px 30px;
+    clip-path: polygon(0 50%, 22px 0, 100% 0, 100% 100%, 22px 100%);
+  }
+  .price-tag::before{
+    content:"";position:absolute;left:9px;top:50%;transform:translateY(-50%);
+    width:9px;height:9px;border-radius:50%;background:var(--paper);
+    box-shadow:inset 0 0 0 1.5px var(--line);
+  }
+  .price-tag .store{font-family:var(--mono);font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-mute);}
+  .price-tag h3{font-family:var(--display);font-size:1.02rem;margin:4px 0 8px;line-height:1.2;}
+  .price-tag .price-row{display:flex;align-items:baseline;gap:8px;}
+  .price-tag .now{font-family:var(--mono);font-weight:600;font-size:1.2rem;color:var(--ink);}
+  .price-tag .was{font-family:var(--mono);font-size:0.82rem;color:var(--text-mute);text-decoration:line-through;}
+  .price-tag .badge{
+    position:absolute;top:-10px;right:14px;background:var(--rose);color:#fff;
+    font-family:var(--mono);font-size:0.7rem;font-weight:600;padding:4px 9px;border-radius:100px;
+  }
+  .tag-1{top:0;right:20px;transform:rotate(-4deg);z-index:3;}
+  .tag-2{top:150px;right:70px;transform:rotate(3deg);z-index:2;}
+  .tag-3{top:290px;right:10px;transform:rotate(-2deg);z-index:1;}
+
+  /* ticker */
+  .ticker-bar{
+    border-top:1px solid var(--line-light);
+    background:var(--ink-2);
+    overflow:hidden;white-space:nowrap;
+    padding:12px 0;
+  }
+  .ticker-track{display:inline-flex;gap:48px;animation:scroll-left 32s linear infinite;padding-left:100%;}
+  .ticker-track span{
+    font-family:var(--mono);font-size:0.84rem;color:var(--text-light);
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .ticker-track b{color:var(--saffron);}
+  .ticker-track .up{color:var(--teal);}
+  @keyframes scroll-left{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-100%);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ticker-track{animation:none;}
+    .eyebrow::before{animation:none;}
+  }
+
+  /* ---------- Sections common ---------- */
+  section{padding:64px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:32px;flex-wrap:wrap;}
+  .section-head h2{font-family:var(--display);font-size:clamp(1.6rem,2.6vw,2.1rem);letter-spacing:-0.01em;}
+  .section-head p{color:var(--text-mute);font-size:0.95rem;margin-top:6px;max-width:460px;}
+  .kicker{
+    font-family:var(--mono);font-size:0.74rem;text-transform:uppercase;letter-spacing:0.12em;
+    color:var(--teal);margin-bottom:8px;display:block;
+  }
+
+  /* category chips */
+  .chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;}
+  .chip{
+    padding:9px 18px;border-radius:100px;border:1px solid var(--line);
+    background:var(--paper-card);font-size:0.86rem;font-weight:600;color:var(--text-mute);
+    transition:all .15s;
+  }
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--text-light);border-color:var(--ink);}
+  .chip:hover{border-color:var(--ink);color:var(--ink);}
+
+  /* deal grid — price tag cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;}
+  .deal{
+    background:var(--paper-card);border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:20px;position:relative;border:1px solid var(--line);
+    display:flex;flex-direction:column;gap:10px;
+    transition:transform .18s, box-shadow .18s;
+  }
+  .deal:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,20,43,0.14);}
+  .deal-top{display:flex;justify-content:space-between;align-items:flex-start;}
+  .deal-store{
+    font-family:var(--mono);font-size:0.68rem;text-transform:uppercase;letter-spacing:0.07em;
+    color:var(--text-mute);background:var(--paper);padding:4px 9px;border-radius:6px;
+  }
+  .deal-off{
+    font-family:var(--mono);font-weight:700;font-size:0.8rem;color:#fff;
+    background:var(--rose);padding:4px 9px;border-radius:6px;
+  }
+  .deal h3{font-family:var(--display);font-size:1.05rem;line-height:1.3;min-height:2.6em;}
+  .deal .cat{font-size:0.78rem;color:var(--text-mute);}
+  .deal .price-row{display:flex;align-items:baseline;gap:10px;margin-top:auto;}
+  .deal .now{font-family:var(--mono);font-weight:700;font-size:1.3rem;}
+  .deal .was{font-family:var(--mono);font-size:0.86rem;color:var(--text-mute);text-decoration:line-through;}
+  .deal .meta-row{display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;color:var(--text-mute);border-top:1px dashed var(--line);padding-top:10px;margin-top:2px;}
+  .deal .rating{color:var(--saffron-dim);font-weight:600;}
+  .deal a.go{
+    display:block;text-align:center;background:var(--ink);color:var(--text-light);
+    padding:10px;border-radius:9px;font-weight:600;font-size:0.86rem;
+    transition:background .15s;
+  }
+  .deal a.go:hover{background:var(--teal);color:var(--ink);}
+  .deal.hot{border-color:var(--rose);}
+  .deal.hot .timer{
+    font-family:var(--mono);font-size:0.76rem;color:var(--rose);font-weight:600;
+    display:flex;align-items:center;gap:6px;
+  }
+
+  .load-more{display:flex;justify-content:center;margin-top:36px;}
+  .load-more button{
+    border:1.5px solid var(--ink);padding:12px 30px;border-radius:100px;
+    font-weight:600;font-size:0.9rem;transition:all .15s;
+  }
+  .load-more button:hover{background:var(--ink);color:var(--text-light);}
+
+  .empty-state{
+    text-align:center;padding:60px 20px;color:var(--text-mute);font-family:var(--mono);font-size:0.92rem;
+    display:none;
+  }
+
+  /* trending horizontal */
+  .trend-strip{
+    display:flex;gap:18px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;
+  }
+  .trend-strip::-webkit-scrollbar{height:6px;}
+  .trend-strip::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px;}
+  .trend-card{
+    scroll-snap-align:start;flex:0 0 220px;background:var(--ink);color:var(--text-light);
+    border-radius:var(--radius);padding:18px;position:relative;overflow:hidden;
+  }
+  .trend-card::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(160deg, transparent 40%, rgba(255,159,28,0.16));
+  }
+  .trend-card .rank{font-family:var(--mono);color:var(--saffron);font-size:1.6rem;font-weight:700;}
+  .trend-card h4{font-family:var(--display);font-size:0.96rem;margin:8px 0 4px;position:relative;z-index:1;}
+  .trend-card .pct{font-family:var(--mono);color:var(--teal);font-size:0.84rem;position:relative;z-index:1;}
+
+  /* store strip */
+  .store-strip{display:flex;flex-wrap:wrap;gap:14px;}
+  .store-pill{
+    padding:14px 22px;background:var(--paper-card);border:1px solid var(--line);border-radius:12px;
+    font-family:var(--display);font-weight:600;font-size:0.94rem;color:var(--text-mute);
+    flex:1;min-width:150px;text-align:center;transition:all .15s;
+  }
+  .store-pill:hover{color:var(--ink);border-color:var(--ink);}
+
+  /* newsletter */
+  .newsletter{
+    background:var(--ink);color:var(--text-light);border-radius:22px;
+    padding:52px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;
+    position:relative;overflow:hidden;
+  }
+  .newsletter::before{
+    content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,159,28,0.28), transparent 70%);
+  }
+  .newsletter h2{font-family:var(--display);font-size:clamp(1.5rem,2.4vw,2rem);margin-bottom:10px;}
+  .newsletter p{color:rgba(241,243,244,0.72);font-size:0.95rem;max-width:420px;}
+  .newsletter-form{display:flex;gap:10px;position:relative;z-index:1;}
+  .newsletter-form input{
+    flex:1;padding:14px 16px;border-radius:10px;border:1px solid var(--line-light);
+    background:rgba(255,255,255,0.07);color:var(--text-light);font-family:var(--body);
+  }
+  .newsletter-form input::placeholder{color:rgba(241,243,244,0.45);}
+  .newsletter-form button{
+    background:var(--saffron);color:var(--ink);font-weight:700;padding:14px 24px;border-radius:10px;
+    white-space:nowrap;
+  }
+  .form-note{font-family:var(--mono);font-size:0.72rem;color:rgba(241,243,244,0.5);margin-top:10px;}
+
+  /* faq (SEO content) */
+  .faq details{
+    border-bottom:1px solid var(--line);padding:18px 0;
+  }
+  .faq summary{
+    cursor:pointer;font-family:var(--display);font-weight:600;font-size:1.02rem;
+    display:flex;justify-content:space-between;align-items:center;list-style:none;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+";font-family:var(--mono);font-size:1.3rem;color:var(--teal);}
+  .faq details[open] summary::after{content:"–";}
+  .faq p{color:var(--text-mute);font-size:0.94rem;line-height:1.65;margin-top:12px;max-width:720px;}
+
+  /* footer */
+  footer{background:var(--ink);color:rgba(241,243,244,0.65);padding:60px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px;margin-bottom:44px;}
+  .footer-grid h5{font-family:var(--mono);color:var(--text-light);font-size:0.76rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px;}
+  .footer-grid li{margin-bottom:9px;font-size:0.88rem;}
+  .footer-grid a:hover{color:var(--saffron);}
+  .footer-brand p{font-size:0.88rem;line-height:1.6;max-width:280px;margin-top:12px;}
+  .footer-bottom{
+    border-top:1px solid var(--line-light);padding-top:22px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-size:0.8rem;font-family:var(--mono);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 980px){
+    .hero-inner{grid-template-columns:1fr;}
+    .tag-stack{height:340px;order:-1;margin:0 auto;max-width:400px;width:100%;}
+    .newsletter{grid-template-columns:1fr;padding:36px 26px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width: 760px){
+    .nav-links, .nav-search{display:none;}
+    .burger{display:block;}
+    .hero{padding-top:20px;}
+    section{padding:44px 0;}
+    .newsletter-form{flex-direction:column;}
+    .footer-grid{grid-template-columns:1fr;}
+    .price-tag{width:220px;}
+  }
+</style>
+</head>
+<body>
+
+<a href="#deal-grid" class="visually-hidden">Skip to deals</a>
+
+<header>
+  <nav class="nav wrap">
+    <a href="#top" class="logo"><span class="mark">DG</span>DealGadget<span style="color:var(--saffron)">.in</span></a>
+    <ul class="nav-links">
+      <li><a href="#deal-grid">Deals</a></li>
+      <li><a href="#trending">Trending</a></li>
+      <li><a href="#stores">Stores</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-search">
+      <span aria-hidden="true">🔍</span>
+      <input type="search" id="navSearch" placeholder="Search deals, brands, stores…" aria-label="Search deals">
+    </div>
+    <a href="#alert" class="nav-cta">Get Deal Alerts</a>
+    <button class="burger" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">Live · 40+ Indian stores tracked</span>
+        <h1 id="hero-heading">Every real discount in India, <em>sorted</em> and verified.</h1>
+        <p class="lede">DealGadget India scans Amazon, Flipkart, Myntra, Nykaa, Croma and dozens more, every hour, so you only see price drops that are actually worth clicking.</p>
+        <form class="hero-search" role="search" onsubmit="return false;">
+          <label for="heroSearch" class="visually-hidden">Search for a product or brand</label>
+          <input type="search" id="heroSearch" placeholder="Try “wireless earbuds under ₹1500”">
+          <button type="submit">Find Deals</button>
+        </form>
+        <div class="hero-stats">
+          <div><strong id="statDeals">1,842</strong><span>Live deals today</span></div>
+          <div><strong>40+</strong><span>Stores tracked</span></div>
+          <div><strong>₹2.1Cr</strong><span>Saved this month</span></div>
+        </div>
+      </div>
+      <div class="tag-stack" aria-hidden="true">
+        <div class="price-tag tag-1">
+          <span class="badge">-42%</span>
+          <span class="store">Flipkart</span>
+          <h3>boAt Rockerz 450 Headphones</h3>
+          <div class="price-row"><span class="now">₹799</span><span class="was">₹1,390</span></div>
+        </div>
+        <div class="price-tag tag-2">
+          <span class="badge">-55%</span>
+          <span class="store">Myntra</span>
+          <h3>Levi's Slim Fit Denim Jacket</h3>
+          <div class="price-row"><span class="now">₹1,349</span><span class="was">₹2,999</span></div>
+        </div>
+        <div class="price-tag tag-3">
+          <span class="badge">-30%</span>
+          <span class="store">Amazon</span>
+          <h3>Instant Pot Duo 6L Cooker</h3>
+          <div class="price-row"><span class="now">₹6,299</span><span class="was">₹8,999</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="ticker-bar" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+  </section>
+
+  <section id="deal-grid" aria-labelledby="grid-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Updated 12 minutes ago</span>
+          <h2 id="grid-heading">Today's best deals</h2>
+          <p>Filter by category or search — every price shown is checked against the last 30 days to confirm it's a genuine drop.</p>
+        </div>
+      </div>
+      <div class="chips" id="chipRow" role="group" aria-label="Filter deals by category"></div>
+      <div class="grid" id="dealGrid"></div>
+      <p class="empty-state" id="emptyState">No deals match that search. Try “earbuds”, “sneakers”, or a store name like “Nykaa”.</p>
+      <div class="load-more"><button id="loadMoreBtn">Show more deals</button></div>
+    </div>
+  </section>
+
+  <section id="trending" aria-labelledby="trend-heading" style="background:var(--paper-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Most clicked, last 24h</span>
+          <h2 id="trend-heading">Trending right now</h2>
+        </div>
+      </div>
+      <div class="trend-strip" id="trendStrip"></div>
+    </div>
+  </section>
+
+  <section id="stores" aria-labelledby="store-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Where we look</span>
+          <h2 id="store-heading">Stores we track around the clock</h2>
+        </div>
+      </div>
+      <div class="store-strip" id="storeStrip"></div>
+    </div>
+  </section>
+
+  <section id="alert">
+    <div class="wrap">
+      <div class="newsletter">
+        <div>
+          <h2>Get tonight's price drops before they sell out.</h2>
+          <p>One email a day, only the deals that beat their 30-day average price. No spam, unsubscribe anytime.</p>
+        </div>
+        <div>
+          <form class="newsletter-form" onsubmit="return false;">
+            <label for="alertEmail" class="visually-hidden">Email address</label>
+            <input type="email" id="alertEmail" placeholder="you@example.com" required>
+            <button type="submit">Notify Me</button>
+          </form>
+          <p class="form-note">Sent from deals@dealgadget.in · ~5,400 subscribers in Delhi, Mumbai &amp; Bengaluru</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Good to know</span>
+          <h2 id="faq-heading">Frequently asked questions</h2>
+        </div>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>How does DealGadget India find its deals?</summary>
+          <p>We track live prices across 40+ Indian retailers including Amazon.in, Flipkart, Myntra, Nykaa and Croma, and compare each current price to its 30-day rolling average. Only genuine drops make it onto the site — inflated "was" prices are filtered out automatically.</p>
+        </details>
+        <details>
+          <summary>Is DealGadget India free to use?</summary>
+          <p>Yes, browsing and searching deals is completely free. We may earn a small affiliate commission when you buy through a listed link, at no extra cost to you — this is how we keep the tracking running.</p>
+        </details>
+        <details>
+          <summary>How often are deals updated?</summary>
+          <p>Prices refresh hourly for trending categories like mobiles and electronics, and at least twice a day for every other category on the site.</p>
+        </details>
+        <details>
+          <summary>Can I get alerts for a specific product?</summary>
+          <p>Yes — sign up with your email above and choose your categories; you'll get a daily digest of only the drops that match what you care about.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo" style="color:var(--text-light)"><span class="mark">DG</span>DealGadget<span style="color:var(--saffron)">.in</span></a>
+        <p>India's independently-tracked deal aggregator. We compare, you save.</p>
+      </div>
+      <div>
+        <h5>Categories</h5>
+        <ul>
+          <li><a href="#deal-grid">Mobiles &amp; Electronics</a></li>
+          <li><a href="#deal-grid">Fashion</a></li>
+          <li><a href="#deal-grid">Home &amp; Kitchen</a></li>
+          <li><a href="#deal-grid">Beauty &amp; Personal Care</a></li>
+          <li><a href="#deal-grid">Grocery</a></li>
+          <li><a href="#deal-grid">Travel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Cities</h5>
+        <ul>
+          <li><a href="#deal-grid">Deals in Delhi NCR</a></li>
+          <li><a href="#deal-grid">Deals in Mumbai</a></li>
+          <li><a href="#deal-grid">Deals in Bengaluru</a></li>
+          <li><a href="#deal-grid">Deals in Hyderabad</a></li>
+          <li><a href="#deal-grid">Deals in Pune</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#faq">About</a></li>
+          <li><a href="#faq">How it works</a></li>
+          <li><a href="#faq">Contact</a></li>
+          <li><a href="#faq">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#faq">Privacy policy</a></li>
+          <li><a href="#faq">Affiliate disclosure</a></li>
+          <li><a href="#faq">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DealGadget India. Prices and availability are set by retailers and may change.</span>
+      <span>Made for bargain hunters across India 🇮🇳</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---------------- Data ----------------
+  const DEALS = [
+    {id:1,title:"Samsung Galaxy M35 5G (128GB)",cat:"Mobiles",store:"Flipkart",now:14999,was:20999,rating:4.3,hot:true,expiresIn:5*3600},
+    {id:2,title:"boAt Airdopes 141 TWS Earbuds",cat:"Electronics",store:"Amazon",now:799,was:1990,rating:4.1,hot:true,expiresIn:2*3600},
+    {id:3,title:"Levi's Men Slim Fit Jeans",cat:"Fashion",store:"Myntra",now:1199,was:2799,rating:4.4},
+    {id:4,title:"Instant Pot Duo 6L Multi Cooker",cat:"Home",store:"Amazon",now:6299,was:8999,rating:4.5},
+    {id:5,title:"Mamaearth Vitamin C Face Serum",cat:"Beauty",store:"Nykaa",now:359,was:599,rating:4.2},
+    {id:6,title:"Noise ColorFit Pro 4 Smartwatch",cat:"Electronics",store:"Flipkart",now:1799,was:3999,rating:4.0,hot:true,expiresIn:7*3600},
+    {id:7,title:"HP 15s Ryzen 5 Laptop (16GB/512GB)",cat:"Electronics",store:"Croma",now:42990,was:54990,rating:4.3},
+    {id:8,title:"Puma Men Running Shoes",cat:"Fashion",store:"Myntra",now:1499,was:3499,rating:4.1},
+    {id:9,title:"Prestige Non-Stick Cookware Set (5pc)",cat:"Home",store:"Amazon",now:1899,was:3295,rating:4.4},
+    {id:10,title:"Tata Sampann Toor Dal 1kg (Pack of 4)",cat:"Grocery",store:"BigBasket",now:429,was:560,rating:4.6},
+    {id:11,title:"MakeMyTrip Goa Flight + 3N Hotel Combo",cat:"Travel",store:"MakeMyTrip",now:8999,was:13499,rating:4.0},
+    {id:12,title:"OnePlus Nord CE 4 Lite 5G",cat:"Mobiles",store:"Amazon",now:18999,was:23999,rating:4.2,hot:true,expiresIn:4*3600},
+    {id:13,title:"Fossil Gen 6 Smartwatch",cat:"Electronics",store:"Flipkart",now:9999,was:22995,rating:4.1},
+    {id:14,title:"Biba Women Printed Kurta",cat:"Fashion",store:"Myntra",now:699,was:1699,rating:4.3},
+    {id:15,title:"Philips Air Fryer HD9252",cat:"Home",store:"Croma",now:5999,was:8995,rating:4.5},
+    {id:16,title:"Lakme 9 to 5 Compact Powder",cat:"Beauty",store:"Nykaa",now:299,was:450,rating:4.0},
+    {id:17,title:"Sony WH-CH520 Wireless Headphones",cat:"Electronics",store:"Amazon",now:2999,was:4990,rating:4.4},
+    {id:18,title:"Nike Air Zoom Pegasus",cat:"Fashion",store:"Flipkart",now:5599,was:9995,rating:4.5},
+    {id:19,title:"Aashirvaad Atta 10kg",cat:"Grocery",store:"BigBasket",now:449,was:520,rating:4.7},
+    {id:20,title:"Redmi 13C 5G (6GB/128GB)",cat:"Mobiles",store:"Amazon",now:10999,was:14999,rating:4.1,hot:true,expiresIn:9*3600},
+  ];
+  const CATEGORIES = ["All","Mobiles","Electronics","Fashion","Home","Beauty","Grocery","Travel"];
+  const inr = n => "₹" + n.toLocaleString("en-IN");
+  const pctOff = d => Math.round((1 - d.now/d.was)*100);
+
+  // ---------------- JSON-LD ----------------
+  try{
+    const schema = document.getElementById('deal-schema');
+    const data = JSON.parse(schema.textContent);
+    data.itemListElement = DEALS.slice(0,12).map((d,i)=>({
+      "@type":"ListItem","position":i+1,
+      "item":{"@type":"Product","name":d.title,
+        "offers":{"@type":"Offer","price":d.now,"priceCurrency":"INR","availability":"https://schema.org/InStock"},
+        "aggregateRating":{"@type":"AggregateRating","ratingValue":d.rating,"reviewCount":50+d.id*7}}
+    }));
+    schema.textContent = JSON.stringify(data);
+  }catch(e){}
+
+  // ---------------- Chips ----------------
+  const chipRow = document.getElementById('chipRow');
+  let activeCat = "All";
+  let query = "";
+  CATEGORIES.forEach(cat=>{
+    const b = document.createElement('button');
+    b.className='chip';
+    b.textContent = cat;
+    b.setAttribute('aria-pressed', cat==="All" ? "true":"false");
+    b.addEventListener('click', ()=>{
+      activeCat = cat;
+      [...chipRow.children].forEach(c=>c.setAttribute('aria-pressed', c===b ? "true":"false"));
+      visibleCount = PAGE_SIZE;
+      render();
+    });
+    chipRow.appendChild(b);
+  });
+
+  // ---------------- Grid render ----------------
+  const grid = document.getElementById('dealGrid');
+  const emptyState = document.getElementById('emptyState');
+  const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const PAGE_SIZE = 8;
+  let visibleCount = PAGE_SIZE;
+
+  function timerLabel(sec){
+    const h = Math.floor(sec/3600), m = Math.floor((sec%3600)/60);
+    return `${h}h ${m}m left`;
+  }
+
+  function cardHTML(d){
+    const hotBits = d.hot ? `<div class="timer" data-expires="${d.expiresIn}">⏱ <span class="t-label">${timerLabel(d.expiresIn)}</span></div>` : "";
+    return `
+    <article class="deal ${d.hot?'hot':''}">
+      <div class="deal-top">
+        <span class="deal-store">${d.store}</span>
+        <span class="deal-off">-${pctOff(d)}%</span>
+      </div>
+      <h3>${d.title}</h3>
+      <span class="cat">${d.cat}</span>
+      <div class="price-row"><span class="now">${inr(d.now)}</span><span class="was">${inr(d.was)}</span></div>
+      <div class="meta-row"><span class="rating">★ ${d.rating}</span>${hotBits}</div>
+      <a class="go" href="#" onclick="return false;">View deal</a>
+    </article>`;
+  }
+
+  function filteredDeals(){
+    return DEALS.filter(d=>{
+      const matchCat = activeCat==="All" || d.cat===activeCat;
+      const q = query.trim().toLowerCase();
+      const matchQuery = !q || d.title.toLowerCase().includes(q) || d.store.toLowerCase().includes(q) || d.cat.toLowerCase().includes(q);
+      return matchCat && matchQuery;
+    });
+  }
+
+  function render(){
+    const list = filteredDeals();
+    const slice = list.slice(0, visibleCount);
+    grid.innerHTML = slice.map(cardHTML).join("");
+    emptyState.style.display = list.length===0 ? "block":"none";
+    loadMoreBtn.style.display = visibleCount >= list.length ? "none":"inline-block";
+    document.getElementById('statDeals').textContent = (1842).toLocaleString("en-IN");
+  }
+
+  loadMoreBtn.addEventListener('click', ()=>{ visibleCount += PAGE_SIZE; render(); });
+
+  // search wiring (both nav + hero search feed the same query)
+  const navSearch = document.getElementById('navSearch');
+  const heroSearch = document.getElementById('heroSearch');
+  function onSearch(e){
+    query = e.target.value;
+    navSearch.value = query; heroSearch.value = query;
+    visibleCount = PAGE_SIZE;
+    render();
+    if(query) document.getElementById('deal-grid').scrollIntoView({behavior:'smooth'});
+  }
+  navSearch.addEventListener('input', onSearch);
+  heroSearch.addEventListener('input', onSearch);
+
+  render();
+
+  // live countdown for hot deals
+  setInterval(()=>{
+    document.querySelectorAll('.timer').forEach(el=>{
+      let s = parseInt(el.dataset.expires,10) - 1;
+      if(s<0) s=0;
+      el.dataset.expires = s;
+      el.querySelector('.t-label').textContent = timerLabel(s);
+    });
+  }, 60000);
+
+  // ---------------- Ticker ----------------
+  const tickerData = [
+    {t:"boAt Airdopes 141",p:"-60%",store:"Amazon"},
+    {t:"Samsung Galaxy M35 5G",p:"-29%",store:"Flipkart"},
+    {t:"Levi's Slim Jeans",p:"-57%",store:"Myntra"},
+    {t:"Noise ColorFit Pro 4",p:"-55%",store:"Flipkart"},
+    {t:"Instant Pot Duo 6L",p:"-30%",store:"Amazon"},
+    {t:"Mamaearth Vitamin C Serum",p:"-40%",store:"Nykaa"},
+    {t:"HP 15s Ryzen 5 Laptop",p:"-22%",store:"Croma"},
+    {t:"Redmi 13C 5G",p:"-27%",store:"Amazon"},
+  ];
+  const track = document.getElementById('tickerTrack');
+  const renderTicker = arr => arr.map(x=>`<span><b>${x.p}</b> ${x.t} <span class="up">· ${x.store}</span></span>`).join("");
+  track.innerHTML = renderTicker(tickerData) + renderTicker(tickerData);
+
+  // ---------------- Trending strip ----------------
+  const trendStrip = document.getElementById('trendStrip');
+  const trending = [...DEALS].sort((a,b)=>pctOff(b)-pctOff(a)).slice(0,8);
+  trendStrip.innerHTML = trending.map((d,i)=>`
+    <div class="trend-card">
+      <span class="rank">#${i+1}</span>
+      <h4>${d.title}</h4>
+      <span class="pct">-${pctOff(d)}% · ${d.store}</span>
+    </div>
+  `).join("");
+
+  // ---------------- Store strip ----------------
+  const stores = ["Amazon.in","Flipkart","Myntra","Nykaa","Croma","BigBasket","Ajio","MakeMyTrip","Tata CLiQ","Reliance Digital"];
+  document.getElementById('storeStrip').innerHTML = stores.map(s=>`<div class="store-pill">${s}</div>`).join("");
+})();
+</script>
+</body>
+</html>
